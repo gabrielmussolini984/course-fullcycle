@@ -9,10 +9,11 @@ const config = {
   apiVersion: '7',
   version: 7,
   defaultSize: '50',
+  debug: process.env.APP_ENV === 'dev',
   configuration: {
-    node: "http://elasticsearch:9200",
-    requestTimeout: 30000,
-    pingTimeout: 3000,
+    node: process.env.ELASTIC_SEARCH_HOST ?? "http://elasticsearch:9200",
+    requestTimeout: process.env.REQUEST_TIMEOUT ?? 30000,
+    pingTimeout: process.env.PING_TIMEOUT ?? 3000,
   },
   // mappingType: 'basedata',
   mappingProperties: {}
