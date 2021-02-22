@@ -18,6 +18,4 @@ RUN npm install
 
 COPY . .
 
-ENV DEBUG=*
-
 CMD [ "npm", "run", "dev" ]

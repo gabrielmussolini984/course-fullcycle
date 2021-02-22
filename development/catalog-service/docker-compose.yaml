@@ -8,6 +8,8 @@ services:
       - 3000:3000
     environment:
       - HOST=0.0.0.0
+      - DEBUG=elasticsearch,loopback:connector:elasticsearch,loopback:core:application
+      - APP_ENV=dev
     volumes:
       - .:/home/node/app
 
